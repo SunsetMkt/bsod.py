@@ -18,10 +18,21 @@ jobs:
     - name: Package Application
       uses: JackMcKew/pyinstaller-action-windows@main
       with:
-        path: .
+        path: silent
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: bsod.py
-        path: dist/windows
+        name: silent
+        path: silent/dist/windows
+
+    - name: Package Application
+      uses: JackMcKew/pyinstaller-action-windows@main
+      with:
+        path: wizard
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: wizard
+        path: wizard/dist/windows
