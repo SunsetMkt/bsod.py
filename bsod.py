@@ -50,7 +50,8 @@ if __name__ == '__main__':
         print("Usage: python3 bsod.py <seconds>")
         sys.exit(1)
     try:
-        # Ask for confirmation
+        # Ask for confirmation, comment out if you don't want to ask
+        '''
         print("This will generate a BSOD in {} seconds.".format(sys.argv[1]))
         print("Press Ctrl+C to cancel.")
         confirmMsg = "Yes, I want to generate a BSOD."
@@ -59,6 +60,7 @@ if __name__ == '__main__':
         if confirmInput != confirmMsg:
             print("Aborted.")
             sys.exit(1)
+        '''
 
         # Get seconds absolute value
         seconds = abs(int(sys.argv[1]))
