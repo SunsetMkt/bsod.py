@@ -47,7 +47,7 @@ def countdown(t):
 if __name__ == '__main__':
     # Check arguments
     if len(sys.argv) != 2:
-        print("Usage: python3 bluescreen.py <seconds>")
+        print("Usage: python3 bsod.py <seconds>")
         sys.exit(1)
     try:
         # Ask for confirmation
