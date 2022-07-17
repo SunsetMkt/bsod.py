@@ -52,7 +52,7 @@ if __name__ == '__main__':
         seconds = abs(
             int(input("Enter seconds to countdown and press Enter:")))
         # Ask for confirmation
-        print("This will generate a BSOD in {} seconds.".format(sys.argv[1]))
+        print("This will generate a BSOD in {} seconds.".format(seconds))
         print("Press Ctrl+C to cancel.")
         confirmMsg = "Yes, I want to generate a BSOD."
         confirmInput = input("Type \""+confirmMsg +
