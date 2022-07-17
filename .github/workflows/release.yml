@@ -14,27 +14,27 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-    - name: Package Application
-      uses: JackMcKew/pyinstaller-action-windows@main
-      with:
-        path: silent
+      - name: Package Application
+        uses: JackMcKew/pyinstaller-action-windows@main
+        with:
+          path: silent
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: silent
-        path: silent/dist/windows
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: silent
+          path: silent/dist/windows
 
-    - name: Package Application
-      uses: JackMcKew/pyinstaller-action-windows@main
-      with:
-        path: wizard
+      - name: Package Application
+        uses: JackMcKew/pyinstaller-action-windows@main
+        with:
+          path: wizard
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: wizard
-        path: wizard/dist/windows
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: wizard
+          path: wizard/dist/windows
 
       - name: Create Release
         id: create_release
